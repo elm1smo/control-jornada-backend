@@ -1,6 +1,7 @@
 package cl.bennu.controljornadabackend.controller;
 
 import cl.bennu.controljornadabackend.constants.Constants;
+import cl.bennu.controljornadabackend.model.Commune;
 import cl.bennu.controljornadabackend.model.Company;
 import cl.bennu.controljornadabackend.service.CompanyService;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +30,7 @@ class CompanyControllerTest {
 
     private static final String COMPANY_JSON = """
             {
-                "communeId": 1,
+                "commune": { "id": 1 },
                 "code": "76000011-1",
                 "name": "Taller Mecánico Rueda",
                 "address": "Av. Lo Espejo 500",
@@ -59,7 +60,8 @@ class CompanyControllerTest {
     private Company company() {
         Company c = new Company();
         c.setId(1L);
-        c.setCommuneId(1L);
+        c.setCommune(new Commune());
+        c.getCommune().setId(1L);
         c.setCode("76000001-1");
         c.setName("Bennu SA");
         c.setAddress("Av. Siempre Viva 123");
