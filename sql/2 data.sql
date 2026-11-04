@@ -19,8 +19,8 @@ INSERT INTO contract_type (id, name) VALUES
   (3, 'Obra');
 
 -- COUNTRY
-INSERT INTO country (id, name, nationality, active) VALUES
-  (1, 'Chile', 'Chilena', true);
+INSERT INTO country (id, name, nationality) VALUES
+  (1, 'Chile', 'Chilena');
 
 -- REGION
 INSERT INTO region (id, country_id, name) VALUES
